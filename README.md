@@ -28,27 +28,72 @@ Diff = A ⊕ B ⊕ Bin B = A'Bin + A'B + BBin
 ## Procedure
 
 
+  1.Use module projname(input,output) to start the Verilog programmming.
 
-Write the detailed procedure here 
+  2.Assign inputs and outputs using the word input and output respectively.
+
+  3.Use defined keywords like wire,assign and required logic gates to represent the boolean expression.
+
+  4.Use each output to represnt onre for differnce and the other for borrow.
+
+  5.End the verilog program using keyword endmodule.
+
+
+
 
 
 ## Program:
-/*
+```
 Program to design a half subtractor and full subtractor circuit and verify its truth table in quartus using Verilog programming.
-Developed by: 
-RegisterNumber:  
-*/
+Developed by: DEVADARSHAN A S
+RegisterNumber:  212222110007
+```
+```
+### PROGRAM FOR HALF SUBTRACTOR:
+module expthree(a,b,difference,borrow);
+input a,b;
+output difference,borrow;
+assign difference = (a^b);
+assign borrow = (~a&b);
+endmodule
+```
+```
+### PROGRAM FOR FULL SUBTRACTOR:
+module expfour(a,b,c,difference,borrow);
+input a,b,c;
+output difference,borrow;
+assign difference=(a^b^c);
+assign borrow = ((~a)&b)|(b&bin)|((~a)&bin);
+endmodule
+```
 
 ## Output:
-
+# HALF SUBTRACTOR
 ## Truthtable
+![211188682-74da1621-d6cd-4d62-b63c-ec58a6ff5515](https://github.com/AJAYASWIN-M/Experiment--03-Half-Subtractor-and-Full-subtractor/assets/118679692/3f65a3e2-43ff-4290-9953-d3b9079c3b11)
+
 
 
 
 ##  RTL realization
+![211188665-eafd140f-5d11-4999-9be3-ae0c89e38b9a](https://github.com/AJAYASWIN-M/Experiment--03-Half-Subtractor-and-Full-subtractor/assets/118679692/f9bdee4f-502e-47be-b84b-5eb6bc342c6f)
+
 
 
 ## Timing diagram 
+![211188672-45892697-9e83-418b-bb9f-373d01b9bdd2](https://github.com/AJAYASWIN-M/Experiment--03-Half-Subtractor-and-Full-subtractor/assets/118679692/d405f565-f912-4b61-be7b-7106781751cb)
+
+# FULL SUBTRACTOR
+## Truthtable
+![211188678-c0f3a8cb-5f19-4215-812f-0ed8837f18be](https://github.com/AJAYASWIN-M/Experiment--03-Half-Subtractor-and-Full-subtractor/assets/118679692/9003618f-21b1-441c-83aa-a1f9975aec53)
+
+##  RTL realization
+
+![266774740-336fd7c4-58f2-47cc-9337-6fa17545c3bf](https://github.com/AJAYASWIN-M/Experiment--03-Half-Subtractor-and-Full-subtractor/assets/118679692/854b10ed-7de9-4909-97c7-a60cf9507edf)
+
+## Timing diagram
+![211188674-e71cd071-5389-4f65-a8d8-0eececbd1ce7](https://github.com/AJAYASWIN-M/Experiment--03-Half-Subtractor-and-Full-subtractor/assets/118679692/939d7f2a-6c59-4b0f-b9c3-b106f4141d7f)
+
 
 ## Result:
 Thus the half subtractor and full subtractor circuits are designed and the truth tables is verified using quartus software.
